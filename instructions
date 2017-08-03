@@ -1,0 +1,5 @@
+Create file_name.csproj file
+Create Startup.cs file
+ -  -Run >dotnet restore
+ Create Program.cs file
+ 
