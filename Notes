@@ -13,6 +13,7 @@ Create Views folder
     -create index.cshtml within Home folder
   -Create Shared folder within Views folder
     -create _Layout.cshtml file to host html body to apply to other .cshtml files
+      -change webpage title within _Layout.cshtml file
 Create Models folder
   -Create FileName.cs (rename this file) - use this file to add setters and getters
 

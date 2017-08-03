@@ -5,33 +5,31 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ToDoList
 {
-    public class Startup
+  public class Startup
+  {
+    public Startup(IHostingEnvironment env)
     {
-        public Startup(IHostingEnvironment env)
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddEnvironmentVariables();
-            Configuration = builder.Build();
-        }
-
-        public IConfigurationRoot Configuration { get; }
-
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
-        }
-
-        public void Configure(IApplicationBuilder app)
-        {
-            app.UseDeveloperExceptionPage();
-            // app.UseStaticFiles();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
-        }
+      var builder = new ConfigurationBuilder() .SetBasePath(env.ContentRootPath) .AddEnvironmentVariables();
+      Configuration = builder.Build();
     }
+
+    public IConfigurationRoot Configuration { get; }
+
+    public void ConfigureServices(IServiceCollection services)
+    {
+      services.AddMvc();
+    }
+
+    public void Configure(IApplicationBuilder app)
+    {
+      app.UseDeveloperExceptionPage();
+      app.UseStaticFiles();
+      app.UseMvc(routes =>
+      {
+        routes.MapRoute(
+        name: "default",
+        template: "{controller=Home}/{action=Index}/{id?}");
+        });
+    }
+  }
 }
