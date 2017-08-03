@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FileName //replace with actual file name
+namespace FileName
 {
     public class Startup
     {
@@ -25,6 +25,7 @@ namespace FileName //replace with actual file name
         public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage(); //for viewing detailed errors
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -33,3 +34,4 @@ namespace FileName //replace with actual file name
             });
         }
     }
+}

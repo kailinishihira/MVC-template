@@ -1,5 +1,25 @@
 Create file_name.csproj file
 Create Startup.cs file
- -  -Run >dotnet restore
- Create Program.cs file
- 
+  Run >dotnet restore
+Create Program.cs file
+Add template code to files and replace namespace file names
+  Run >dotnet build
+Create .gitignore file
+Create Controllers folder
+  -Create HomeController.cs file within Controllers folder
+Create Views folder
+  -Create Home folder within Views folder
+    -this folder will store all of your .cshtml files
+    -create index.cshtml within Home folder
+  -Create Shared folder within Views folder
+    -create _Layout.cshtml file to host html body to apply to other .cshtml files
+Create Models folder
+  -Create FileName.cs (rename this file) - use this file to add setters and getters
+
+
+Create wwwroot folder to store any non-C# files (images, CSS, Scripts, etc)
+  -run >dotnet add package Microsoft.AspNetCore.StaticFiles
+  -run >dotnet restore
+
+
+For color on .cshtml run >apm install language-cshtml
