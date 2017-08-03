@@ -23,3 +23,5 @@ Create wwwroot folder to store any non-C# files (images, CSS, Scripts, etc)
 
 
 For color on .cshtml run >apm install language-cshtml
+
+Optional: Partials View example for Footer in Views/Shared folder
