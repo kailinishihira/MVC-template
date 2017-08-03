@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FileName
+namespace ToDoList
 {
     public class Startup
     {
@@ -24,8 +24,8 @@ namespace FileName
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseDeveloperExceptionPage(); //for viewing detailed errors
-            app.UseStaticFiles();
+            app.UseDeveloperExceptionPage();
+            // app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
