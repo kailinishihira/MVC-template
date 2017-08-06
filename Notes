@@ -16,12 +16,9 @@ Create Views folder
       -change webpage title within _Layout.cshtml file
 Create Models folder
   -Create FileName.cs (rename this file) - use this file to add setters and getters
-
-
 Create wwwroot folder to store any non-C# files (images, CSS, Scripts, etc)
   -run >dotnet add package Microsoft.AspNetCore.StaticFiles
   -run >dotnet restore
-
 
 For color on .cshtml run >apm install language-cshtml
 
